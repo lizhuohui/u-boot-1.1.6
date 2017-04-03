@@ -452,7 +452,8 @@ void main_loop (void)
     s = getenv ("bootdelay");
 	bootdelay = s ? (int)simple_strtol(s, NULL, 10) : CONFIG_BOOTDELAY;
 
-    bootdelay = CONFIG_BOOTDELAY;//hui add 2017-04-03
+    if (bootdelay > 60) bootdelay = 60;//hui add 2017-04-03
+    else if (bootdelay < 2) bootdelay = 2;
 	debug ("### main_loop entered: bootdelay=%d\n\n", bootdelay);
 
 # ifdef CONFIG_BOOT_RETRY_TIME

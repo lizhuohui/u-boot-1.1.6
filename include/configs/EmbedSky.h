@@ -240,7 +240,7 @@
 /* this must be included AFTER the definition of CONFIG_COMMANDS (if any) */
 #include <cmd_confdefs.h>
 
-#define CONFIG_BOOTDELAY		15
+#define CONFIG_BOOTDELAY		2
 
 #if CONFIG_128MB_SDRAM
 #define CONFIG_BOOTARGS			"noinitrd root=/dev/mtdblock2 init=/linuxrc console=ttySAC0 mem=128M"
